@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Git 常用命令速查</title>
+<style>
+  @page {
+    size: A4;
+    margin: 14mm 14mm 12mm 14mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Segoe UI", sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1f2328;
+  }
+  h1 {
+    font-size: 17pt;
+    margin: 0 0 2mm 0;
+    letter-spacing: 0.5px;
+  }
+  .sub {
+    color: #666;
+    font-size: 8.5pt;
+    margin-bottom: 4mm;
+    padding-bottom: 3mm;
+    border-bottom: 1.5px solid #1f2328;
+  }
+  h2 {
+    font-size: 11pt;
+    margin: 5mm 0 1.5mm 0;
+    padding-left: 2.5mm;
+    border-left: 3px solid #2f6feb;
+    line-height: 1.2;
+    page-break-after: avoid;
+  }
+  h2.pb { page-break-before: always; }
+  p { margin: 1mm 0; }
+  code, .cmd {
+    font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+    font-size: 9pt;
+  }
+  code {
+    background: #f0f2f5;
+    padding: 0.3mm 1mm;
+    border-radius: 2px;
+  }
+  pre {
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-left: 3px solid #2f6feb;
+    border-radius: 3px;
+    padding: 2mm 3mm;
+    margin: 1.5mm 0;
+    font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+    font-size: 9pt;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    page-break-inside: avoid;
+  }
+  pre .c { color: #6a737d; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5mm 0;
+    page-break-inside: auto;
+  }
+  th, td {
+    border: 1px solid #d0d7de;
+    padding: 1.2mm 2mm;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f4;
+    font-weight: 600;
+    font-size: 9pt;
+  }
+  tr { page-break-inside: avoid; }
+  td:first-child { width: 34%; }
+  td.cmd-col { font-family: Consolas, "Courier New", monospace; font-size: 8.8pt; color: #0b3d91; }
+  .flow {
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+    margin: 2mm 0 1mm 0;
+    font-size: 8.8pt;
+  }
+  .flow span.box {
+    border: 1px solid #c8d1da;
+    background: #f8fafc;
+    border-radius: 3px;
+    padding: 1mm 2mm;
+    white-space: nowrap;
+  }
+  .flow span.arrow { color: #2f6feb; font-weight: 600; }
+  .tip {
+    background: #fff8e1;
+    border: 1px solid #f0d48a;
+    border-radius: 3px;
+    padding: 1.5mm 3mm;
+    margin: 2mm 0;
+    font-size: 9pt;
+  }
+  .tip b { color: #8a5a00; }
+  .two-col { display: flex; gap: 4mm; }
+  .two-col > div { flex: 1; }
+  .footer {
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid #d0d7de;
+    color: #888;
+    font-size: 8pt;
+  }
+</style>
+</head>
+<body>
+
+<h1>Git 常用命令速查</h1>
+<div class="sub">整理自本次交流：提交、推送、分支重命名、远程地址 · 简明版</div>
+
+<h2>一、先记住这条主线</h2>
+<p>工作区改文件 → <code>git add</code> 放进暂存区 → <code>git commit</code> 存进本地仓库 → <code>git push</code> 上传到云端。 <b>commit 只存在本地，不会自动上传。</b></p>
+<div class="flow">
+  <span class="box">工作区</span><span class="arrow">→ add →</span>
+  <span class="box">暂存区</span><span class="arrow">→ commit →</span>
+  <span class="box">本地仓库</span><span class="arrow">→ push →</span>
+  <span class="box">远程仓库</span>
+</div>
+
+<h2>二、常用命令速查</h2>
+
+<table>
+  <tr><th style="width:19%">分类</th><th style="width:37%">命令</th><th>作用</th></tr>
+  <tr><td>仓库 / 状态</td><td class="cmd-col">git init</td><td>把当前文件夹初始化为 Git 仓库</td></tr>
+  <tr><td></td><td class="cmd-col">git status</td><td>查看哪些文件被修改、已暂存或未跟踪</td></tr>
+  <tr><td>提交</td><td class="cmd-col">git add .</td><td>把当前目录所有改动加入暂存区</td></tr>
+  <tr><td></td><td class="cmd-col">git commit -m "说明"</td><td>把暂存区内容提交到本地仓库，并附提交说明</td></tr>
+  <tr><td></td><td class="cmd-col">git log --oneline</td><td>单行显示提交历史</td></tr>
+  <tr><td>分支</td><td class="cmd-col">git branch</td><td>查看本地分支</td></tr>
+  <tr><td></td><td class="cmd-col">git branch -M main</td><td>把当前分支强制重命名为 main</td></tr>
+  <tr><td></td><td class="cmd-col">git switch -c feature</td><td>新建并切换到 feature 分支</td></tr>
+  <tr><td></td><td class="cmd-col">git branch -vv</td><td>查看分支及其跟踪的远程分支</td></tr>
+  <tr><td>远程</td><td class="cmd-col">git remote add origin URL</td><td>关联远程仓库，命名为 origin</td></tr>
+  <tr><td></td><td class="cmd-col">git remote -v</td><td>查看当前远程仓库地址</td></tr>
+  <tr><td></td><td class="cmd-col">git remote set-url origin URL</td><td>修改远程仓库地址（云端改名后用）</td></tr>
+  <tr><td></td><td class="cmd-col">git push -u origin main</td><td>首次推送，同时建立跟踪关系</td></tr>
+  <tr><td></td><td class="cmd-col">git push / git pull</td><td>建立跟踪后，推送 / 拉取可省略参数</td></tr>
+  <tr><td>回退 / 对比</td><td class="cmd-col">git diff</td><td>查看尚未暂存的改动</td></tr>
+  <tr><td></td><td class="cmd-col">git restore 文件名</td><td>撤销工作区对某文件的修改</td></tr>
+  <tr><td></td><td class="cmd-col">git clone URL</td><td>把远程仓库完整下载到本地</td></tr>
+</table>
+
+<h2 class="pb">三、三个容易混淆的参数</h2>
+<table>
+  <tr><th style="width:22%">写法</th><th style="width:23%">含义</th><th>要点</th></tr>
+  <tr><td class="cmd-col">-u</td><td>= --set-upstream，设置上游分支</td><td>只在首次推送新分支时用；之后 <code>git push</code> / <code>git pull</code> 就能自动对应远程分支</td></tr>
+  <tr><td class="cmd-col">-m</td><td>重命名分支（move）</td><td>目标分支已存在时会拒绝</td></tr>
+  <tr><td class="cmd-col">-M</td><td>强制重命名（move + force）</td><td>目标分支已存在也直接覆盖，初始化仓库时常用</td></tr>
+  <tr><td class="cmd-col">commit -m</td><td>提交说明（message）</td><td>后面跟一句描述，说明这次改了什么</td></tr>
+</table>
+
+<h2>四、两种典型场景</h2>
+
+<div class="two-col">
+  <div>
+    <p><b>① 本地项目首次上传</b></p>
+    <pre>git init
+git add .
+git commit -m "Initial commit"
+
+git branch -M main
+git remote add origin \
+  https://github.com/用户名/my_collection.git
+git push -u origin main</pre>
+  </div>
+  <div>
+    <p><b>② 云端仓库改名后</b></p>
+    <pre>git remote set-url origin \
+  https://github.com/用户名/新仓库名.git
+
+git remote -v        <span class="c"># 确认已改</span>
+git push             <span class="c"># 照常推送</span></pre>
+  </div>
+</div>
+
+<h2>五、提交说明怎么写</h2>
+<table>
+  <tr><th style="width:34%">说明</th><th>含义</th></tr>
+  <tr><td class="cmd-col">Initial commit</td><td>初始提交</td></tr>
+  <tr><td class="cmd-col">Add xxx</td><td>新增某个功能或文件</td></tr>
+  <tr><td class="cmd-col">Update xxx</td><td>更新某个功能</td></tr>
+  <tr><td class="cmd-col">Fix xxx bug</td><td>修复某个问题</td></tr>
+  <tr><td class="cmd-col">Refactor xxx</td><td>重构某个模块</td></tr>
+  <tr><td class="cmd-col">Docs: update README</td><td>更新文档</td></tr>
+</table>
+
+<div class="tip">
+  <b>小提示：</b>云端改名后，GitHub 一般会对旧地址做重定向，但仍建议执行
+  <code>git remote set-url origin 新地址</code>，避免之后踩坑。
+  另外 <code>git commit</code> 完成的是"本地留痕"，只有 <code>git push</code> 才真正上传。
+</div>
+
+<div class="footer">Git 常用命令速查 · 简明版</div>
+
+</body>
+</html>

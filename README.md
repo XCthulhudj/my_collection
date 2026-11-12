@@ -1,55 +1,31 @@
-# 常用网站导航
+# 个人收藏与笔记
 
-整理常用的硬件设计、机械模型、代码开发、AI 助手及技术学习网站，方便日常查阅。
+存放日常收藏的**网站**和**笔记教程**，按类型分目录组织，方便查找和补充。
 
-## 目录
+## 仓库结构
 
-- [硬件设计与开源项目](#硬件设计与开源项目)
-- [机械模型与三维设计](#机械模型与三维设计)
-- [软件与工具资源](#软件与工具资源)
-- [代码托管与项目协作](#代码托管与项目协作)
-- [AI 助手](#ai-助手)
-- [技术学习与开发社区](#技术学习与开发社区)
-
-## 硬件设计与开源项目
-
-| 网站 | 链接 | 主要用途 |
+| 目录 | 说明 | 入口 |
 |---|---|---|
-| 立创开源硬件平台（OSHWHub） | <https://oshwhub.com/> | 查找和分享开源电子项目，可参考硬件设计、原理图、PCB、嵌入式程序及项目实现方案。适合电子设计、单片机和嵌入式开发学习。 |
+| `websites/` | 网站收藏，按领域分成 6 类 | [websites/README.md](websites/README.md) |
+| `notes/` | 笔记与教程，一个主题一个目录 | [notes/README.md](notes/README.md) |
+| `tools/` | 辅助脚本（HTML 转 PDF、PDF 预览等） | [tools/README.md](tools/README.md) |
 
-## 机械模型与三维设计
+## 网站收藏
 
-| 网站 | 链接 | 主要用途 |
+| 领域 | 收录什么 | 文件 |
 |---|---|---|
-| GrabCAD Library | <https://grabcad.com/library?page=1&time=all_time&sort=recent> | CAD 三维模型资源库，可搜索和参考机械零件、装配体及设备模型，适合机械结构设计和建模参考。 |
+| 硬件设计与开源硬件 | 开源电子项目、原理图 / PCB、嵌入式 | [websites/hardware.md](websites/hardware.md) |
+| 机械模型与三维设计 | CAD 模型库、零件与装配体 | [websites/mechanical.md](websites/mechanical.md) |
+| 软件与工具资源 | Windows 软件、科研与开发工具 | [websites/software.md](websites/software.md) |
+| 代码托管与协作 | GitHub、Gitee、开源项目协作 | [websites/code.md](websites/code.md) |
+| AI 助手 | 对话式 AI、代码辅助 | [websites/ai.md](websites/ai.md) |
+| 技术学习与社区 | 技术博客、教程、问答 | [websites/community.md](websites/community.md) |
 
-## 软件与工具资源
+## 笔记与教程
 
-| 网站 | 链接 | 主要用途 |
+| 主题 | 内容 | 入口 |
 |---|---|---|
-| 石头干货箱（QQStone） | <https://qqstone.top/> | 软件与技术资源整理网站，包含 Windows 常用软件、科研工具、开发编程工具以及部分使用教程。下载软件时建议核对软件来源、版本和授权信息，优先选择软件官方渠道。 |
-
-## 代码托管与项目协作
-
-| 网站 | 链接 | 主要用途 |
-|---|---|---|
-| Gitee（码云） | <https://gitee.com/> | 基于 Git 的代码托管和研发协作平台，可创建仓库、管理代码版本、提交变更及协作开发，国内访问和使用较方便。 |
-| GitHub | <https://github.com/login?return_to=%2Fdashboard> | 代码托管与开源协作平台，可查找开源项目、阅读源码、管理个人仓库、提交 Issue 和 Pull Request。当前链接为登录入口。 |
-
-## AI 助手
-
-| 网站 | 链接 | 主要用途 |
-|---|---|---|
-| DeepSeek | <https://chat.deepseek.com/> | AI 对话助手，可用于技术问答、代码辅助、资料整理和思路分析。 |
-| ChatGPT | <https://chatgpt.com/> | AI 助手，可用于技术学习、代码编写与调试、文档撰写、方案分析和资料总结。 |
-
-## 技术学习与开发社区
-
-| 网站 | 链接 | 主要用途 |
-|---|---|---|
-| CSDN | <https://www.csdn.net/> | 开发者技术社区，包含技术博客、编程教程、开发问答、资源下载和学习内容，可用于查找开发问题的解决思路。 |
-
----
+| Git | 常用命令速查（PDF，A4 两页） | [notes/git/](notes/git/README.md) |
 
 ## 使用建议
 
@@ -58,3 +34,9 @@
 - **代码学习与管理：** 使用 GitHub 或 Gitee 搜索开源项目，并通过 Git 管理自己的代码版本。
 - **技术问题排查：** 可结合 CSDN、开源项目文档和 AI 助手交叉验证解决方案。
 - **软件安装：** 软件资源网站可用于了解工具，但安装包应尽量从软件官网或可信发布渠道获取，并留意授权要求。
+
+## 维护约定
+
+- 新增网站：放进 `websites/` 对应类别的文件，并更新该目录 README 的清单。
+- 新增笔记：在 `notes/` 下按主题建目录，目录里放 `README.md` 做索引，再更新本页表格。
+- 生成的中间文件（PDF 预览图、日志等）不要提交，`tools/.gitignore` 已做基础排除。

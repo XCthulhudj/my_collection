@@ -1,0 +1,6 @@
+# 临时文件与生成产物
+tools/**/tmp/
+tools/**/*.log
+tools/**/node_modules/
+tools/**/__pycache__/
+*.tmp
