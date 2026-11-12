@@ -1,25 +1,27 @@
 # 个人收藏与笔记
 
-存放日常收藏的**网站**和**笔记教程**，按类型分目录组织，方便查找和补充。
+存放日常收藏的**网站**和**笔记教程**：网站集中在一个 `websites.md`，笔记按主题放 `notes/`，辅助脚本放 `tools/`。
 
 ## 仓库结构
 
-| 目录 | 说明 | 入口 |
-|---|---|---|
-| `websites/` | 网站收藏，按领域分成 6 类 | [websites/README.md](websites/README.md) |
-| `notes/` | 笔记与教程，一个主题一个目录 | [notes/README.md](notes/README.md) |
-| `tools/` | 辅助脚本（HTML 转 PDF、PDF 预览等） | [tools/README.md](tools/README.md) |
+| 路径 | 说明 |
+|---|---|
+| [websites.md](websites.md) | 网站收藏，按 6 类分节，顶部有快速索引 |
+| [notes/](notes/README.md) | 笔记与教程，一个主题一个目录 |
+| [tools/](tools/README.md) | 辅助脚本（HTML 转 PDF、PDF 预览、链接检查） |
 
 ## 网站收藏
 
-| 领域 | 收录什么 | 文件 |
-|---|---|---|
-| 硬件设计与开源硬件 | 开源电子项目、原理图 / PCB、嵌入式 | [websites/hardware.md](websites/hardware.md) |
-| 机械模型与三维设计 | CAD 模型库、零件与装配体 | [websites/mechanical.md](websites/mechanical.md) |
-| 软件与工具资源 | Windows 软件、科研与开发工具 | [websites/software.md](websites/software.md) |
-| 代码托管与协作 | GitHub、Gitee、开源项目协作 | [websites/code.md](websites/code.md) |
-| AI 助手 | 对话式 AI、代码辅助 | [websites/ai.md](websites/ai.md) |
-| 技术学习与社区 | 技术博客、教程、问答 | [websites/community.md](websites/community.md) |
+全部收录在 [websites.md](websites.md)，按以下 6 类组织：
+
+| 分类 | 收录内容 |
+|---|---|
+| 硬件设计与开源硬件 | 开源电子项目、原理图 / PCB、嵌入式 |
+| 机械模型与三维设计 | CAD 模型库、零件与装配体 |
+| 软件与工具资源 | Windows 软件、科研与开发工具 |
+| 代码托管与协作 | GitHub、Gitee、开源项目协作 |
+| AI 助手 | 对话式 AI、代码辅助 |
+| 技术学习与社区 | 技术博客、教程、问答 |
 
 ## 笔记与教程
 
@@ -37,6 +39,7 @@
 
 ## 维护约定
 
-- 新增网站：放进 `websites/` 对应类别的文件，并更新该目录 README 的清单。
-- 新增笔记：在 `notes/` 下按主题建目录，目录里放 `README.md` 做索引，再更新本页表格。
-- 生成的中间文件（PDF 预览图、日志等）不要提交，`tools/.gitignore` 已做基础排除。
+- **加网站：** 直接在 [websites.md](websites.md) 对应分类的表格里加一行，不需要新建文件。
+- **加笔记：** 在 `notes/` 下按主题建目录（英文小写短名，如 `git`、`stm32`），目录内放 `README.md` 做索引，再更新本页表格，写法见 [notes/README.md](notes/README.md)。
+- 生成的中间文件（PDF 预览图、日志等）不要提交。
+- 改完 Markdown 后可跑一次 `tools\scripts\check-links.ps1` 校验本地链接。
