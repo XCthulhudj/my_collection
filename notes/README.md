@@ -8,6 +8,7 @@
 | 主题 | 目录 | 内容 |
 |---|---|---|
 | Git | [git/](git/README.md) | 常用命令速查（PDF + HTML 源文件） |
+| Linux / Ubuntu | [linux/ubuntu/](linux/ubuntu/README.md) | 桌面快捷键速查（图片 + PDF + HTML 源文件） |
 
 ## 新增主题的做法
 

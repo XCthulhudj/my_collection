@@ -16,7 +16,7 @@
 | 工具 | 文件 | 用途 | 运行方式 |
 |---|---|---|---|
 | html-to-pdf | `scripts/html-to-pdf.ps1` | 用 Chrome/Edge 无头模式把 HTML 打印成 PDF，中文正常 | `powershell -ExecutionPolicy Bypass -File tools\scripts\html-to-pdf.ps1 -InputHtml 输入.html -OutputPdf 输出.pdf` |
-| pdf-preview | `scripts/pdf-preview.py` | 把 PDF 逐页渲染成 PNG，检查排版/分页 | `python tools\scripts\pdf-preview.py 输入.pdf 输出目录 --dpi 100`（需 `pip install pymupdf`） |
+| pdf-preview | `scripts/pdf-preview.py` | 把 PDF 逐页渲染成 PNG：逐页预览排版，或单页导出成一张图片 | 逐页：`python tools\scripts\pdf-preview.py 输入.pdf 输出目录 --dpi 100`；单页：`... 输入.pdf --page 1 --dpi 200 --out 图片.png`（需 `pip install pymupdf`） |
 | check-links | `scripts/check-links.ps1` | 校验所有 Markdown 里的本地相对链接是否存在 | `powershell -ExecutionPolicy Bypass -File tools\scripts\check-links.ps1` |
 
 ### 环境备注

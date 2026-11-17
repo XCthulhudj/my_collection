@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Ubuntu 桌面快捷键速查</title>
+<style>
+  @page { size: A4; margin: 11mm 11mm 9mm 11mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Microsoft YaHei", "微软雅黑", "PingFang SC", "Segoe UI", sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    color: #1f2328;
+  }
+  h1 { font-size: 17.5pt; margin: 0 0 1mm 0; }
+  .sub {
+    color: #666;
+    font-size: 9pt;
+    margin-bottom: 3mm;
+    padding-bottom: 2.5mm;
+    border-bottom: 1.5px solid #1f2328;
+  }
+  .cols { display: flex; gap: 6mm; align-items: flex-start; }
+  .col { flex: 1 1 0; min-width: 0; }
+  h2 {
+    font-size: 11pt;
+    margin: 3.2mm 0 1.3mm 0;
+    padding-left: 2mm;
+    border-left: 3px solid #e95420;
+    line-height: 1.15;
+  }
+  .col > h2:first-child { margin-top: 0; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #d0d7de; padding: 1mm 1.7mm; vertical-align: middle; }
+  th { background: #eef1f4; font-size: 9.2pt; text-align: left; }
+  td.k.k-sm { font-size: 8pt; white-space: nowrap; }
+  td.k {
+    width: 49%;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 8.8pt;
+    color: #0b3d91;
+  }
+  tbody tr:nth-child(even) td { background: #fafbfc; }
+  .note {
+    margin-top: 3.5mm;
+    background: #fff4e5;
+    border: 1px solid #f0c48a;
+    border-radius: 3px;
+    padding: 2mm 3mm;
+    font-size: 9pt;
+  }
+  .footer {
+    margin-top: 3mm;
+    border-top: 1px solid #d0d7de;
+    padding-top: 1.5mm;
+    color: #888;
+    font-size: 7.6pt;
+  }
+</style>
+</head>
+<body>
+
+<h1>Ubuntu 桌面快捷键速查</h1>
+<div class="sub">GNOME 默认设置 · 窗口 / 工作区 / 终端 / 文件管理器 / 截图 · 适合嵌入式与 C/C++ 开发日常</div>
+
+<div class="cols">
+  <div class="col">
+
+    <h2>1. 窗口管理</h2>
+    <table>
+      <tr><th>快捷键</th><th>功能</th></tr>
+      <tr><td class="k">Super（Win）</td><td>打开活动概览 / 应用搜索</td></tr>
+      <tr><td class="k">Alt + Tab</td><td>切换窗口</td></tr>
+      <tr><td class="k">Alt + F4</td><td>关闭当前窗口</td></tr>
+      <tr><td class="k">Super + ↑</td><td>最大化窗口</td></tr>
+      <tr><td class="k">Super + ↓</td><td>还原 / 最小化窗口</td></tr>
+      <tr><td class="k">Super + ←</td><td>窗口靠左排列</td></tr>
+      <tr><td class="k">Super + →</td><td>窗口靠右排列</td></tr>
+      <tr><td class="k">Super + D</td><td>显示桌面</td></tr>
+      <tr><td class="k">Super + L</td><td>锁定屏幕</td></tr>
+      <tr><td class="k">Ctrl + Alt + Tab</td><td>切换系统界面元素</td></tr>
+    </table>
+
+    <h2>2. 工作区管理</h2>
+    <table>
+      <tr><th>快捷键</th><th>功能</th></tr>
+      <tr><td class="k">Ctrl + Alt + ↑</td><td>切换到上方工作区</td></tr>
+      <tr><td class="k">Ctrl + Alt + ↓</td><td>切换到下方工作区</td></tr>
+      <tr><td class="k">Super + PageUp</td><td>切换到上一个工作区</td></tr>
+      <tr><td class="k">Super + PageDown</td><td>切换到下一个工作区</td></tr>
+      <tr><td class="k k-sm">Shift + Super + PageUp</td><td>将窗口移动到上一个工作区</td></tr>
+      <tr><td class="k k-sm">Shift + Super + PageDown</td><td>将窗口移动到下一个工作区</td></tr>
+    </table>
+
+    <h2>3. 终端（开发常用）</h2>
+    <table>
+      <tr><th>快捷键</th><th>功能</th></tr>
+      <tr><td class="k">Ctrl + Alt + T</td><td>打开终端</td></tr>
+      <tr><td class="k">Ctrl + Shift + T</td><td>新建终端标签页</td></tr>
+      <tr><td class="k">Ctrl + Shift + W</td><td>关闭当前标签页</td></tr>
+      <tr><td class="k">Ctrl + Shift + C</td><td>复制</td></tr>
+      <tr><td class="k">Ctrl + Shift + V</td><td>粘贴</td></tr>
+      <tr><td class="k">Ctrl + L</td><td>清空终端显示区域</td></tr>
+      <tr><td class="k">Ctrl + C</td><td>中断当前命令</td></tr>
+      <tr><td class="k">Ctrl + D</td><td>退出当前 Shell / 发送 EOF</td></tr>
+      <tr><td class="k">Tab</td><td>自动补全</td></tr>
+      <tr><td class="k">↑ / ↓</td><td>浏览历史命令</td></tr>
+    </table>
+
+  </div>
+  <div class="col">
+
+    <h2>4. 文件管理器</h2>
+    <table>
+      <tr><th>快捷键</th><th>功能</th></tr>
+      <tr><td class="k">Ctrl + N</td><td>新建窗口</td></tr>
+      <tr><td class="k">Ctrl + T</td><td>新建标签页</td></tr>
+      <tr><td class="k">Ctrl + L</td><td>输入路径</td></tr>
+      <tr><td class="k">Ctrl + H</td><td>显示 / 隐藏隐藏文件</td></tr>
+      <tr><td class="k">Ctrl + C</td><td>复制</td></tr>
+      <tr><td class="k">Ctrl + X</td><td>剪切</td></tr>
+      <tr><td class="k">Ctrl + V</td><td>粘贴</td></tr>
+      <tr><td class="k">F2</td><td>重命名</td></tr>
+      <tr><td class="k">Delete</td><td>移至回收站</td></tr>
+      <tr><td class="k">Shift + Delete</td><td>永久删除</td></tr>
+    </table>
+
+    <h2>5. 截图</h2>
+    <table>
+      <tr><th>快捷键</th><th>功能</th></tr>
+      <tr><td class="k">PrtSc</td><td>打开截图界面（视版本而定）</td></tr>
+      <tr><td class="k">Alt + PrtSc</td><td>截取当前窗口（部分版本）</td></tr>
+      <tr><td class="k">Shift + PrtSc</td><td>截取指定区域（部分版本）</td></tr>
+    </table>
+
+    <h2>6. 最值得先记住的</h2>
+    <table>
+      <tr><th>快捷键</th><th>功能</th></tr>
+      <tr><td class="k">Ctrl + Alt + T</td><td>快速打开终端</td></tr>
+      <tr><td class="k">Ctrl + Shift + T</td><td>终端新建标签页</td></tr>
+      <tr><td class="k">Ctrl + L</td><td>文件管理器里快速输入路径</td></tr>
+      <tr><td class="k">Ctrl + H</td><td>显示隐藏文件</td></tr>
+      <tr><td class="k">Alt + Tab</td><td>切换程序</td></tr>
+      <tr><td class="k">Super + ← / →</td><td>左右分屏</td></tr>
+      <tr><td class="k">Ctrl + C</td><td>终止终端程序</td></tr>
+    </table>
+
+    <div class="note">
+      <b>补充：</b><code>Super</code> 就是键盘上的 Windows 徽标键。不同 Ubuntu 版本、GNOME 配置和键盘布局可能存在差异，可在「设置 → 键盘 → 查看和自定义快捷键」中查看或修改。
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">Ubuntu 桌面快捷键速查 · GNOME 默认 · 打印/截图两用</div>
+
+</body>
+</html>

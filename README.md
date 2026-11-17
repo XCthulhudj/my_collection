@@ -28,6 +28,7 @@
 | 主题 | 内容 | 入口 |
 |---|---|---|
 | Git | 常用命令速查（PDF，A4 两页） | [notes/git/](notes/git/README.md) |
+| Linux / Ubuntu | 桌面快捷键速查（图片 + PDF，A4 单页） | [notes/linux/ubuntu/](notes/linux/ubuntu/README.md) |
 
 ## 使用建议
 
