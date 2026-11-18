@@ -30,6 +30,7 @@
 | f427-heluo ·「河洛」双核开发板（STM32F427VIT6） | <https://github.com/lsl-sys/f427-heluo> | 自研 STM32F427VIT6 双核开发板参考工程：含三个 STM32 固件工程、PC 端 Python 工具和完整工程文档，涉及电机控制 / 飞控实时控制、FreeRTOS OTA 升级、板载无线 DAPlink。适合 STM32F427 硬件与固件设计参考。 |
 | PCB 电源设计（CSDN） | <https://blog.csdn.net/weixin_45365488/article/details/134033683> | PCB 电源部分的设计思路与布局要点教程，可作为电源电路布局布线参考。 |
 | MOS 管详解（CSDN） | <https://blog.csdn.net/qq_51272949/article/details/139710213> | NMOS / PMOS 工作原理、体二极管、选型关键参数（Vds、Vgs(th)、Id、gm、Rds(on)、开关速度）以及导通 / 开关损耗分析，偏工程选型与驱动设计。 |
+| 【玩转倒立摆】（一）数学模型的建立（CSDN · C.Yang_） | <https://blog.csdn.net/ych0872/article/details/150410107> | 一阶倒立摆建模教程：用牛顿力学推物理方程（小车 + 摆杆、阻尼、相互作用力）→ 状态空间模型 → 在平衡点附近泰勒展开线性化，给出线性状态空间形式。适合平衡车、电机闭环控制入门，配套 MATLAB 仿真。 |
 
 ## 机械模型与三维设计
 
@@ -82,6 +83,8 @@
 |---|---|---|
 | Ubuntu 完全教程（博客园 · dutlei） | <https://www.cnblogs.com/dutlei/archive/2012/11/20/2778327.html> | Ubuntu / Linux 入门长文：基本操作、分区与安装、命令行语法、文件操作、权限（chmod/chown/SUID）、压缩解压、搜索（find/grep）、用户管理等，可当速查手册用。 |
 | Makefile 学习笔记（博客园 · 凌杰） | <https://www.cnblogs.com/owlman/p/5514724.html> | 以 K&R 的 calc 程序为例，从最简规则逐步推到变量、模式规则、自动变量（`$<`/`$@`）、`.PHONY` 伪目标和 `wildcard`/`shell` 函数，并整理了 Tab 缩进、`-j` 并发、`=` 与 `:=` 等常见陷阱。 |
+| SCons 使用教程（博客园 · dreamboy2000） | <https://www.cnblogs.com/dreamboy2000/p/15355410.html> | SCons 构建工具入门：`SConstruct` 写法（本质是 Python 脚本）、`Program`/`Object`/`Library`/`SharedLibrary` 编译方法、`Glob`/`Split` 批量收源文件、`CPPPATH` 隐式依赖、`Environment`/`Clone` 多套编译环境与 `SConscript` 子目录组织。适合作为 Makefile 的替代方案参考。 |
+| Ubuntu 更换国内镜像源（CSDN · 番茄牛肉~） | <https://blog.csdn.net/weixin_42419823/article/details/137748486> | 换源实操：备份 `/etc/apt/sources.list` → `sed` 批量替换或手动写入阿里 / 清华 / 中科大 / 网易源 → `apt update && upgrade`。附带各版本代号（noble / jammy / focal / bionic）和 vim 无权限保存的 `:w !sudo tee %` 技巧。 |
 
 ---
 

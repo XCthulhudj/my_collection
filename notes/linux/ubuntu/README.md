@@ -55,7 +55,7 @@
 | `Tab` | 自动补全 |
 | `↑ / ↓` | 浏览历史命令 |
 
-> 终端里复制粘贴必须带 `Shift`，因为 `Ctrl + C` 已经被"中断当前命令"占用。
+> **终端内复制 / 粘贴要用 `Ctrl + Shift + C` / `Ctrl + Shift + V`。** 因为 `Ctrl + C` 在终端里表示"中断当前命令"，按下去只会打断程序，不会复制；这是从 Windows 转过来最容易踩的坑。文件管理器和普通应用里仍然是 `Ctrl + C` / `Ctrl + V`。
 
 ## 4. 文件管理器
 
@@ -98,7 +98,12 @@
 - 不同 Ubuntu 版本、GNOME 配置和键盘布局可能存在差异，可在「设置 → 键盘 → 查看和自定义快捷键」中查看或修改。
 - 截图快捷键在 Ubuntu 22.04 之后改成了交互式界面（`PrtSc` 弹出截图工具），更早的版本行为略有不同。
 
-延伸阅读：[Ubuntu 完全教程](https://www.cnblogs.com/dutlei/archive/2012/11/20/2778327.html)（命令行、权限、压缩、用户管理等基础操作，也收在 [websites.md](../../../websites.md) 的参考文章里）。
+延伸阅读：
+
+- [Ubuntu 完全教程](https://www.cnblogs.com/dutlei/archive/2012/11/20/2778327.html)：命令行、权限、压缩、用户管理等基础操作。
+- [Ubuntu 更换国内镜像源](https://blog.csdn.net/weixin_42419823/article/details/137748486)：apt 装不上、下载慢时先换源，三条命令搞定。
+- [Linux Shell 常用命令](../shell/README.md)：日常命令速查。
+- 以上文章都收在 [websites.md](../../../websites.md) 的参考文章里。
 
 ## 重新生成图片和 PDF
 
