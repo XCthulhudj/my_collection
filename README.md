@@ -29,6 +29,8 @@
 |---|---|---|
 | Git | 常用命令速查（PDF，A4 两页） | [notes/git/](notes/git/README.md) |
 | Linux / Ubuntu | 桌面快捷键速查（图片 + PDF，A4 单页） | [notes/linux/ubuntu/](notes/linux/ubuntu/README.md) |
+| YAML | 语法符号、缩进、多行字符串、常见坑 | [notes/yaml/](notes/yaml/README.md) |
+| Makefile | 构建规则、变量与目标文件依赖 | [notes/makefile/](notes/makefile/makefile学习笔记.md) |
 
 ## 使用建议
 

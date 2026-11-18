@@ -9,6 +9,8 @@
 |---|---|---|
 | Git | [git/](git/README.md) | 常用命令速查（PDF + HTML 源文件） |
 | Linux / Ubuntu | [linux/ubuntu/](linux/ubuntu/README.md) | 桌面快捷键速查（图片 + PDF + HTML 源文件） |
+| YAML | [yaml/](yaml/README.md) | 语法符号、缩进规则、多行字符串、常见坑 |
+| Makefile | [makefile/](makefile/makefile学习笔记.md) | 构建规则、变量、目标文件依赖（笔记为单个 .md 文件） |
 
 ## 新增主题的做法
 
