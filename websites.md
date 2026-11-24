@@ -85,6 +85,7 @@
 | Makefile 学习笔记（博客园 · 凌杰） | <https://www.cnblogs.com/owlman/p/5514724.html> | 以 K&R 的 calc 程序为例，从最简规则逐步推到变量、模式规则、自动变量（`$<`/`$@`）、`.PHONY` 伪目标和 `wildcard`/`shell` 函数，并整理了 Tab 缩进、`-j` 并发、`=` 与 `:=` 等常见陷阱。 |
 | SCons 使用教程（博客园 · dreamboy2000） | <https://www.cnblogs.com/dreamboy2000/p/15355410.html> | SCons 构建工具入门：`SConstruct` 写法（本质是 Python 脚本）、`Program`/`Object`/`Library`/`SharedLibrary` 编译方法、`Glob`/`Split` 批量收源文件、`CPPPATH` 隐式依赖、`Environment`/`Clone` 多套编译环境与 `SConscript` 子目录组织。适合作为 Makefile 的替代方案参考。 |
 | Ubuntu 更换国内镜像源（CSDN · 番茄牛肉~） | <https://blog.csdn.net/weixin_42419823/article/details/137748486> | 换源实操：备份 `/etc/apt/sources.list` → `sed` 批量替换或手动写入阿里 / 清华 / 中科大 / 网易源 → `apt update && upgrade`。附带各版本代号（noble / jammy / focal / bionic）和 vim 无权限保存的 `:w !sudo tee %` 技巧。 |
+| 【Ubuntu 20.04】如何安装软件（CSDN · 猫巳） | <https://blog.csdn.net/qq_31635851/article/details/123895109> | 装软件的五种方式：软件商店、`apt`（含 apt 与 apt-get 对照表、`apt -f install` 修复损坏包）、`snap`、`dpkg -i` 装 deb 包、源码 `./configure && make && sudo make install`。换源之后按这篇装软件最顺手。 |
 
 ---
 

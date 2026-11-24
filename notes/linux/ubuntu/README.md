@@ -102,6 +102,7 @@
 
 - [Ubuntu 完全教程](https://www.cnblogs.com/dutlei/archive/2012/11/20/2778327.html)：命令行、权限、压缩、用户管理等基础操作。
 - [Ubuntu 更换国内镜像源](https://blog.csdn.net/weixin_42419823/article/details/137748486)：apt 装不上、下载慢时先换源，三条命令搞定。
+- [Ubuntu 如何安装软件](https://blog.csdn.net/qq_31635851/article/details/123895109)：apt / snap / dpkg / 源码安装的区别，含 apt 与 apt-get 对照表。
 - [Linux Shell 常用命令](../shell/README.md)：日常命令速查。
 - 以上文章都收在 [websites.md](../../../websites.md) 的参考文章里。
 
