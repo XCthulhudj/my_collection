@@ -1,0 +1,13 @@
+Import('env')                            # 接收主脚本 exports 过来的 env
+
+src_files = [
+    'main.cpp',
+    'src/my_math.cpp'
+]
+
+program = env.Program(
+    'main',                              # 输出可执行文件名
+    src_files
+)
+
+Return('program')                        # 把目标节点返回给主脚本

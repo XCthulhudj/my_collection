@@ -1,0 +1,34 @@
+import os
+
+os.makedirs('build', exist_ok=True)      # 创建构建目录
+os.makedirs('bin', exist_ok=True)
+SConsignFile('build/.sconsign')          # 指定 SCons 状态数据库的位置
+
+env = Environment()
+
+inc_paths = [
+    '#inc'                               # '#' 表示以 SConstruct 所在目录为根
+]
+
+defines = [
+    'DEBUG'
+]
+
+env.Append(
+    CPPPATH=inc_paths,
+    CPPDEFINES=defines,
+    CXXFLAGS=['-std=c++17', '-Wall'],    # C++ 专用
+    CCFLAGS=['-O2']                      # C / C++ 共用
+)
+
+program = env.SConscript(
+    'SConscript',                        # 子构建脚本
+    variant_dir='build',                 # 构建目录，目标文件都放这里
+    duplicate=0,                         # 不复制源文件到 build
+    exports='env'                        # 把 env 传给子脚本
+)
+
+installed_program = env.Install('bin', program)   # 安装到 bin/
+env.Alias('install', installed_program)           # 给安装任务起名 install
+
+Default(program)                         # 不指定目标时默认构建 program

@@ -12,7 +12,10 @@
 | Linux Shell | [linux/shell/](linux/shell/README.md) | 常用命令速查：符号、文件、查找过滤、进程、网络、压缩、快捷键 |
 | YAML | [yaml/](yaml/README.md) | 语法符号、缩进规则、多行字符串、常见坑 |
 | Tcl | [tcl/](tcl/README.md) | 基本语法、列表与过程、运行方式、Vivado 常用命令、常见坑 |
-| Makefile | [makefile/](makefile/makefile学习笔记.md) | 构建规则、变量、目标文件依赖（笔记为单个 .md 文件） |
+| PowerShell | [powershell/](powershell/README.md) | 输出/判断/循环/函数/删除/路径判断，含 clean.ps1 实测示例 |
+| Makefile | [makefile/](makefile/README.md) | 基础语法 + Windows mingw32-make 实战（含可运行示例） |
+| SCons | [scons/](scons/README.md) | SConstruct/SConscript 写法、常用 API、增量构建、可运行示例 |
+| CMake | [cmake/](cmake/README.md) | 最小工程、单可执行/可执行+库两种结构、常用函数、现代写法与坑 |
 
 ## 新增主题的做法
 

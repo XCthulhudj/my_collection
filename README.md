@@ -32,7 +32,10 @@
 | Linux Shell | 常用命令速查：符号、文件、查找过滤、进程、网络、压缩、快捷键 | [notes/linux/shell/](notes/linux/shell/README.md) |
 | YAML | 语法符号、缩进、多行字符串、常见坑 | [notes/yaml/](notes/yaml/README.md) |
 | Tcl | 基本语法、列表与过程、Vivado 常用命令、常见坑 | [notes/tcl/](notes/tcl/README.md) |
-| Makefile | 构建规则、变量与目标文件依赖 | [notes/makefile/](notes/makefile/makefile学习笔记.md) |
+| Makefile | 基础语法 + Windows mingw32-make 实战（含可运行示例） | [notes/makefile/](notes/makefile/README.md) |
+| SCons | SConstruct/SConscript 写法、常用 API、可运行示例 | [notes/scons/](notes/scons/README.md) |
+| PowerShell | 输出/判断/循环/函数/删除/路径判断，含 clean.ps1 示例 | [notes/powershell/](notes/powershell/README.md) |
+| CMake | 最小工程、两种常用结构、常用函数与坑（含可运行示例） | [notes/cmake/](notes/cmake/README.md) |
 
 ## 使用建议
 
