@@ -1,6 +1,6 @@
 # 个人收藏与笔记
 
-存放日常收藏的**网站**和**笔记教程**：网站集中在一个 `websites.md`，笔记按主题放 `notes/`，辅助脚本放 `tools/`。
+存放日常收藏的**网站**、**笔记教程**和**软件安装记录**：网站集中在一个 `websites.md`，笔记按主题放 `notes/`，软件安装放 `app/`，辅助脚本和临时产物放本地工作目录 `build/`（不进仓库）。
 
 ## 仓库结构
 
@@ -8,7 +8,8 @@
 |---|---|
 | [websites.md](websites.md) | 网站收藏，按 6 类分节，顶部有快速索引 |
 | [notes/](notes/README.md) | 笔记与教程，一个主题一个目录 |
-| [tools/](tools/README.md) | 辅助脚本（HTML 转 PDF、PDF 预览、链接检查） |
+| [app/](app/README.md) | 软件安装记录：选哪个版本、干什么用、怎么装 |
+| `build/` | 本地工作目录（脚本、临时产物），已在 `.gitignore` 中排除 |
 
 ## 网站收藏
 
@@ -36,6 +37,10 @@
 | SCons | SConstruct/SConscript 写法、常用 API、可运行示例 | [notes/scons/](notes/scons/README.md) |
 | PowerShell | 输出/判断/循环/函数/删除/路径判断，含 clean.ps1 示例 | [notes/powershell/](notes/powershell/README.md) |
 | CMake | 最小工程、两种常用结构、常用函数与坑（含可运行示例） | [notes/cmake/](notes/cmake/README.md) |
+| Windows 技巧 | 文件夹里直接开 cmd/powershell、地址栏与 Win+R 小技巧 | [notes/windows/](notes/windows/README.md) |
+| VS Code | 扩展推荐、推荐设置、项目级推荐配置 | [notes/vscode/](notes/vscode/README.md) |
+| ARM 启动汇编 | 读懂 STM32 启动文件：向量表、Reset_Handler、.data/.bss 搬运 | [notes/arm-startup/](notes/arm-startup/README.md) |
+| NextPilot | bsps 目录说明（ndt/px4/sitl/qemu）、QEMU 仿真链路、入门顺序 | [notes/nextpilot/](notes/nextpilot/README.md) |
 
 ## 使用建议
 
@@ -49,5 +54,6 @@
 
 - **加网站：** 直接在 [websites.md](websites.md) 对应分类的表格里加一行，不需要新建文件。
 - **加笔记：** 在 `notes/` 下按主题建目录（英文小写短名，如 `git`、`stm32`），目录内放 `README.md` 做索引，再更新本页表格，写法见 [notes/README.md](notes/README.md)。
-- 生成的中间文件（PDF 预览图、日志等）不要提交。
-- 改完 Markdown 后可跑一次 `tools\scripts\check-links.ps1` 校验本地链接。
+- **加软件安装：** 在 [app/README.md](app/README.md) 里按「用途 / 版本选择 / 安装步骤 / 验证」四段补一节。
+- 生成的中间文件（PDF 预览图、日志等）不要提交；辅助脚本和临时产物统一放 `build/`，该目录已被 `.gitignore` 排除。
+- 改完 Markdown 后可跑一次 `powershell -ExecutionPolicy Bypass -File build\scripts\check-links.ps1` 校验本地链接。

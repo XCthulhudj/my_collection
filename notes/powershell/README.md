@@ -284,5 +284,5 @@ Clean completed!
 
 ## 10. 延伸
 
-- 本项目里的实际脚本：[tools/scripts/html-to-pdf.ps1](../../tools/scripts/html-to-pdf.ps1)（调用 Chrome 无头打印 PDF）、[tools/scripts/check-links.ps1](../../tools/scripts/check-links.ps1)（检查 Markdown 本地链接）。
+- 本机工作目录 `build/scripts/` 里有两个现成脚本可以参考写法：`html-to-pdf.ps1`（调用 Chrome 无头打印 PDF）、`check-links.ps1`（检查 Markdown 本地链接）。该目录不进仓库，换机器需要自己重建。
 - [SCons 笔记](../scons/README.md)：`scons -c` 也能清理，但用 PowerShell 脚本可以顺手清更多目录（日志、临时文件）。

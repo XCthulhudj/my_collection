@@ -24,7 +24,7 @@
 在仓库根目录执行：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools\scripts\html-to-pdf.ps1 `
+powershell -ExecutionPolicy Bypass -File build\scripts\html-to-pdf.ps1 `
   -InputHtml notes\git\git-cheatsheet.html `
   -OutputPdf "notes\git\Git常用命令速查.pdf"
 ```

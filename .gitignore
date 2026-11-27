@@ -1,0 +1,16 @@
+# 工作目录：本地脚本与构建产物，不进仓库
+build/
+
+# Python
+__pycache__/
+*.pyc
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.log

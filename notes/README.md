@@ -16,6 +16,10 @@
 | Makefile | [makefile/](makefile/README.md) | 基础语法 + Windows mingw32-make 实战（含可运行示例） |
 | SCons | [scons/](scons/README.md) | SConstruct/SConscript 写法、常用 API、增量构建、可运行示例 |
 | CMake | [cmake/](cmake/README.md) | 最小工程、单可执行/可执行+库两种结构、常用函数、现代写法与坑 |
+| Windows 技巧 | [windows/](windows/README.md) | 文件夹里直接开 cmd/powershell（Alt+D → cmd）、地址栏与 Win+R 技巧 |
+| VS Code | [vscode/](vscode/README.md) | 扩展推荐（通用/C++/嵌入式/Python）、推荐设置、项目级推荐 |
+| ARM 启动汇编 | [arm-startup/](arm-startup/README.md) | 读懂 STM32 启动文件：指示 vs 指令、寄存器、向量表、.data/.bss 搬运、坑 |
+| NextPilot | [nextpilot/](nextpilot/README.md) | bsps 目录（ndt/px4/sitl+qemu）、QEMU 仿真链路、入门阅读顺序 |
 
 ## 新增主题的做法
 

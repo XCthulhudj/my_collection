@@ -112,12 +112,12 @@
 
 ```powershell
 # PDF
-powershell -ExecutionPolicy Bypass -File tools\scripts\html-to-pdf.ps1 `
+powershell -ExecutionPolicy Bypass -File build\scripts\html-to-pdf.ps1 `
   -InputHtml notes\linux\ubuntu\ubuntu-shortcuts.html `
   -OutputPdf "notes\linux\ubuntu\Ubuntu快捷键速查.pdf"
 
 # PNG（需要 pip install pymupdf）
-python tools\scripts\pdf-preview.py "notes\linux\ubuntu\Ubuntu快捷键速查.pdf" `
+python build\scripts\pdf-preview.py "notes\linux\ubuntu\Ubuntu快捷键速查.pdf" `
   --page 1 --dpi 200 --out "notes\linux\ubuntu\Ubuntu快捷键速查.png"
 ```
 
